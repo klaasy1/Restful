@@ -20,9 +20,9 @@ class Restful extends AbtractRestful {
     //Use this as an example to implement this according to your need, or just overide this function
     public function encodeXml($responseData) {
         // creating object of SimpleXMLElement
-        $xml = new SimpleXMLElement('<?xml version="1.0"?><root></root>');
+        $xml = new \SimpleXMLElement('<?xml version="1.0"?><root></root>');
         foreach ($responseData as $key => $value) {
-            $xml->addChild('element' . $key, $value);
+            $xml->addChild('a' . $key, $value);
         }
         return $xml->asXML();
     }

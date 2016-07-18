@@ -1,8 +1,16 @@
 # Restful
 This is a simple rest base class for beginners in rest
 
-## Installation
-Add `klaasy1/restful` as a requirement to `composer.json`:
-```bash
-$ composer require klaasy1/restful
+### Installation
+
+Add
+
 ```
+"klaasy1/restful": "dev-master"
+```
+
+to the ```require``` section of your `composer.json` file.
+
+## Usage
+```php
+use klaasy1\Restful\Restful;
