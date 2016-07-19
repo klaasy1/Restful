@@ -30,11 +30,11 @@ $rawData = $myModel->getRawData();
 echo $rest->getData($rawData);
 ```
 Returns a json response as the default.
-You can set Accept request header to either return xml or html respone, please note that you need to extend AbtractRestful and implement encodeHtml and encodeXml according to your response data needs
+You can set Accept request header to either return xml or html respone, please note that you need to extend AbtractRestful class and implement encodeHtml and encodeXml functions according to your response data needs and use your RestfulClass instead.
 
 ##Example
 ```php
-class Restful extends AbtractRestful {
+class RestfulClass extends AbtractRestful {
 
     //Use this as an example to implement this according to your need, or just overide this function
     public function encodeHtml($responseData) {
