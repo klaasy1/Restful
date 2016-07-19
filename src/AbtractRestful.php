@@ -117,6 +117,8 @@ abstract class AbtractRestful {
             case 'application/xml':
                 $response = $this->encodeXml($rawData);
                 break;
+            default:
+                $response = $this->encodeJson($rawData);
         }
         
         return $response;
