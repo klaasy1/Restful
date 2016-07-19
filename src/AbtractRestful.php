@@ -106,20 +106,20 @@ abstract class AbtractRestful {
         $ContentType = $_SERVER['HTTP_ACCEPT'];
         $this->setHttpHeaders($ContentType, $statusCode);
 
+        $response = '';
         switch($ContentType){
             case 'application/json':
                 $response = $this->encodeJson($rawData);
-                echo $response;
                 break;
             case 'text/html':
                 $response = $this->encodeHtml($rawData);
-                echo $response;
                 break;
             case 'application/xml':
                 $response = $this->encodeXml($rawData);
-                echo $response;
                 break;
         }
+        
+        return $response;
         
     }
 
