@@ -36,14 +36,14 @@ You can set Accept request header to either return xml or html respone, please n
 ```php
 class RestfulClass extends AbtractRestful {
 
-    //Use this as an example to implement this according to your need, or just overide this function
+    //Use this as an example to implement this according to your need
     public function encodeHtml($responseData) {
 
         //Html respose data here
         return $htmlResponse;
     }
 
-    //Use this as an example to implement this according to your need, or just overide this function
+    //Use this as an example to implement this according to your need
     public function encodeXml($responseData) {
         //SimpleXMLElement Object
         $xml = new \SimpleXMLElement('<?xml version="1.0"?><root></root>');
